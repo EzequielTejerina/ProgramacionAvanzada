@@ -1,7 +1,5 @@
 package metodosdeordenamiento;
 
-import java.util.Arrays;
-
 public class Basico {
 	double[] coord;
 	
