@@ -2,9 +2,12 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.util.Stack;
+
 import org.junit.Test;
 
 import algoritmos.DFS;
+import algoritmos.Dijkstra;
 import algoritmos.Kruskall;
 
 public class TestAlgoritmo {
@@ -59,5 +62,26 @@ public class TestAlgoritmo {
 		grafo[3][7] = 1;
 		
 		DFS d1 = new DFS(0,grafo);
+	}
+	
+	@Test
+	public void testDijkstra(){
+		int[][] grafo = new int[3][3];
+		for(int i = 0; i < 3 ; i++)
+			for(int j = 0; j < 3 ; j++)
+				grafo[i][j] = 10000;
+		/*grafo[0][1] = 10;
+		grafo[0][3] = 30;
+		grafo[0][4] = 100;
+		grafo[1][2] = 50;
+		grafo[2][4] = 10;
+		grafo[3][2] = 20;
+		grafo[3][4] = 60;*/
+		grafo[0][1] = 8;
+		grafo[0][2] = 5;
+		grafo[1][0] = 3;
+		grafo[2][1] = 2;
+		
+		Dijkstra k1 = new Dijkstra(0,grafo);
 	}
 }
