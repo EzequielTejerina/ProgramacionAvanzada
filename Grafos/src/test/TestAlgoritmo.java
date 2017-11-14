@@ -11,6 +11,8 @@ import algoritmos.DFS;
 import algoritmos.Dijkstra;
 import algoritmos.Floyd;
 import algoritmos.Kruskall;
+import algoritmos.Prim;
+import algoritmos.Warshall;
 
 public class TestAlgoritmo {
 
@@ -125,5 +127,30 @@ public class TestAlgoritmo {
 		
 		Floyd d1 = new Floyd(grafo);
 		d1.resolver();
+	}
+	
+	@Test
+	public void testWarshall() {
+		
+		int[][] grafo = {{0,1,0,0},
+						 {0,0,1,0},
+						 {1,0,0,1},
+						 {0,0,0,0}};
+		Warshall w1 = new Warshall(grafo);
+		w1.imprimir();
+	}
+	
+	@Test
+	public void TestPrim() {
+
+		int x = 999;
+		int matAdy[][] = {{x,12,10,15,20},
+						  {12,x,12,6,6},
+						  {10,12,x,1,4},
+						  {15,6,1,x,1},
+						  {20,6,4,1,x}};
+
+		Prim p1 = new Prim(matAdy);
+		p1.imprimir();
 	}
 }
