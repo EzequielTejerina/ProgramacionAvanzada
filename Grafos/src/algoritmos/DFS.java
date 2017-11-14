@@ -27,7 +27,7 @@ public class DFS {
 	}
 	
 	private void mostrar(){
-		System.out.print("Busqueda en profundidad\n");
+		System.out.print("\nBusqueda en profundidad\n");
 		for(int i = 0 ; i < vectorResultado.length ; i++)
 			System.out.print(vectorResultado[i]+" ");
 	}

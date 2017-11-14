@@ -6,8 +6,10 @@ import java.util.Stack;
 
 import org.junit.Test;
 
+import algoritmos.BFS;
 import algoritmos.DFS;
 import algoritmos.Dijkstra;
+import algoritmos.Floyd;
 import algoritmos.Kruskall;
 
 public class TestAlgoritmo {
@@ -83,5 +85,45 @@ public class TestAlgoritmo {
 		grafo[2][1] = 2;
 		
 		Dijkstra k1 = new Dijkstra(0,grafo);
+	}
+	
+	@Test
+	public void testBFS(){
+		int[][] grafo = new int[9][9];
+		grafo[0][1] = 1;
+		grafo[0][2] = 1;
+		grafo[0][3] = 1;
+		grafo[1][0] = 1;
+		grafo[1][4] = 1;
+		grafo[1][5] = 1;
+		grafo[2][0] = 1;
+		grafo[2][5] = 1;
+		grafo[3][0] = 1;
+		grafo[3][6] = 1;
+		grafo[4][1] = 1;
+		grafo[4][7] = 1;
+		grafo[5][1] = 1;
+		grafo[5][7] = 1;
+		grafo[6][3] = 1;
+		grafo[6][7] = 1;
+		grafo[6][8] = 1;
+		grafo[7][4] = 1;
+		grafo[7][5] = 1;
+		grafo[7][6] = 1;
+		grafo[8][6] = 1;
+		
+		BFS d1 = new BFS(grafo,0);
+	}
+	
+	@Test
+	public void testFloyd(){
+		int[][] grafo = new int[3][3];
+		grafo[0][1] = 8;
+		grafo[1][0] = 3;
+		grafo[2][1] = 2;
+		grafo[0][2] = 5;
+		
+		Floyd d1 = new Floyd(grafo);
+		d1.resolver();
 	}
 }
