@@ -70,9 +70,9 @@ public class TestAlgoritmo {
 	
 	@Test
 	public void testDijkstra(){
-		int[][] grafo = new int[3][3];
-		for(int i = 0; i < 3 ; i++)
-			for(int j = 0; j < 3 ; j++)
+		int[][] grafo = new int[9][9];
+		for(int i = 0; i < 9 ; i++)
+			for(int j = 0; j < 9 ; j++)
 				grafo[i][j] = 10000;
 		/*grafo[0][1] = 10;
 		grafo[0][3] = 30;
@@ -80,15 +80,27 @@ public class TestAlgoritmo {
 		grafo[1][2] = 50;
 		grafo[2][4] = 10;
 		grafo[3][2] = 20;
-		grafo[3][4] = 60;*/
+		grafo[3][4] = 60;
+		
 		grafo[0][1] = 8;
 		grafo[0][2] = 5;
 		grafo[1][0] = 3;
-		grafo[2][1] = 2;
+		grafo[2][1] = 2;*/
+		grafo[0][1]= 3;
+		grafo[0][2]= 2;
+		grafo[1][2]= 4;
+		grafo[1][5]= 1;
+		grafo[2][7]= 1;
+		grafo[7][5]= 5;
+		grafo[3][4]= 2;
+		grafo[2][3]= 2;
+		grafo[2][5]= 2;
+		grafo[5][8]= 3;
+		
 		
 		Dijkstra k1 = new Dijkstra(0,grafo);
 	}
-	
+/*	
 	@Test
 	public void testBFS(){
 		int[][] grafo = new int[9][9];
@@ -124,6 +136,11 @@ public class TestAlgoritmo {
 		grafo[1][0] = 3;
 		grafo[2][1] = 2;
 		grafo[0][2] = 5;
+		grafo[0][0] = 999;
+		grafo[1][1] = 999;
+		grafo[2][2] = 999;
+		grafo[1][2] = 99;
+		grafo[2][0] = 999;
 		
 		Floyd d1 = new Floyd(grafo);
 		d1.resolver();
@@ -153,4 +170,5 @@ public class TestAlgoritmo {
 		Prim p1 = new Prim(matAdy);
 		p1.imprimir();
 	}
+	*/
 }

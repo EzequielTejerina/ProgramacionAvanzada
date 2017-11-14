@@ -21,8 +21,8 @@ public class Floyd {
 				if (i != j){
 					for (int k = 0; k < fNow.length; k++) {
 						if (!(i == k || j == k)){
-							if (fAnt[i][j] > (fNow[i][k]+fNow[k][j])) {
-								fNow[i][j] = fNow[i][k] + fNow[k][j];
+							if (fAnt[i][j] > (fAnt[i][k]+fAnt[k][j])) {
+								fNow[i][j] = fAnt[i][k] + fAnt[k][j];
 							}
 						}
 					}					
@@ -30,7 +30,6 @@ public class Floyd {
 			}
 			fAnt = fNow;
 		}
-		
         mostrar();
 	}
 
